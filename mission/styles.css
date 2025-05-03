@@ -6,6 +6,15 @@ body{
     line-height: 1.5;
 }
 
+.dark{
+    background-color: #333;
+    color: white;
+}
+
+.dark h5{
+    color: rgb(160, 212, 237);
+}
+
 .title{
     text-align: center;
 }
@@ -27,7 +36,6 @@ h5{
     padding: 50px 150px;
     border: 1px solid lightgray;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
     box-sizing: content-box;
 }
 
