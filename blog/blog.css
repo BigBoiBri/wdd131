@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+:root {
+  --primary-color: #93a3b1;
+  --secondary-color: #636564;
+  --accent-color: #322214;
+  --body-font: Helvetica, Arial, sans-serif;
+  --headline-font: 'Poetsen One', impact, serif;
+}
+
+body{
+    font-family: var(--headline-font);
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.skiptocontent a{
+    position: absolute;
+    top: -40px;
+    color: var(--accent-color);
+}
+.skiptocontent a:focus{
+    top: 0;
+}
+
+header h1{
+    display: grid;
+    text-align: center;
+    padding: 20px;
+}
+
+header nav{
+    border: #322214 1px solid;
+    margin-bottom: 20px;
+}
+
+li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.main-nav{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: end;
+    justify-items: end;
+    padding-right: 40px;
+    list-style: none;
+}
+
+.firstbookinfo{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.misc {
+    grid-column: 1 / 2;
+    justify-self: center;
+}
+
+.book{
+    grid-column:2/3;
+}
+
+.filters{
+    grid-column: 3/4;
+    padding-left: 20px;
+}
+
+.filterform{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.sort{
+    grid-row: 1/2;
+}
+.age{
+    grid-row: 2/3;
+}
+.genre{
+    grid-row: 3/4;
+}
+.rating{
+    grid-row: 4/5;
+}
