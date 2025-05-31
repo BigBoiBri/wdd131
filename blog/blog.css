@@ -48,28 +48,51 @@ li a{
     list-style: none;
 }
 
-.firstbookinfo{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.bookgrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+    position: relative;
 }
 
+.bookentry {
+    display: contents;
+    grid-column: 1 / span 2;
+}
+
+
 .misc {
-    grid-column: 1 / 2;
     justify-self: center;
+    text-align: right;
+    border-right: 2px solid var(--accent-color);
+    padding: 10px;
+    grid-column: 1/2;
+}
+
+
+img{
+    max-width: 250px;
 }
 
 .book{
-    grid-column:2/3;
+    text-align: center;
+    padding: 10px;
 }
 
 .filters{
     grid-column: 3/4;
-    padding-left: 20px;
+    grid-row: 1 / span 10;
+    padding: 10px;
+    border: var(--accent-color) 1px solid;
+    position: sticky;
+    top: 20px;
 }
 
 .filterform{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
 }
 .sort{
     grid-row: 1/2;

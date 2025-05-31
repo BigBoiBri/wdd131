@@ -7,7 +7,7 @@
     <meta name="author" content="Brian Skousen">
     <meta name="description" content ="A place to share books and thoughts about them.">
     <link rel="stylesheet" href="blog.css">
-    <script src="blog.js"></script>
+    <script defer src="blog.js"></script>
 </head>
 <body>
     <header>
@@ -23,47 +23,25 @@
             </ul>
         </nav>
     </header>
+
     <main id="maincontent">
-        <section class="firstbookinfo">
-            <div class="misc">
-                <h3>July 5, 2022</h3>
-                <p>10-14</p>
-                <h4>Fantasy</h4>
-                <p>*****</p>
-            </div>
-            <div class="book">
-                <h2>Septimus Heap Book One: Magyk</h2>
-                <img src="Magkycover2.jpg" alt="Book Cover Image">
-                <p>If you enjoy stories about seventh sons of seventh sons and magyk this is the book for you.</p>
-            </div>
-            <div class="filters">
-                <form class="filterform">
-                    <label for="sort">Sort:</label>
-                    <select id="sort" name="sort"></select>
+            <section class="bookgrid" id="book-grid">
+                <div class="filters">
+                    <form class="filterform">
+                        <label for="sort">Sort:</label>
+                        <select id="sort" name="sort"></select>
 
-                    <label for="age">Age:</label>
-                    <select id="age" name="age"></select>
+                        <label for="age">Age:</label>
+                        <select id="age" name="age"></select>
 
-                    <label for="genre">Genre:</label>
-                    <select id="genre" name="genre"></select>
+                        <label for="genre">Genre:</label>
+                        <select id="genre" name="genre"></select>
 
-                    <label for="rating">Rating:</label>
-                    <select id="rating" name="rating"></select>
-                </form>
-            </div>
-        </section>
-        <section class="firstbookinfo">
-            <div class="misc">
-                <h3>December 12, 2021</h3>
-                <p>12-16</p>
-                <h4>Fantasy</h4>
-                <p>****</p>
-            </div>
-            <div class="book">
-                <h2>Magnus Chase Book One: Sword of Summer</h2>
-                <img src="MagnusChase.jpeg" alt="Book Cover Image">
-                <p>The anticipated new novel by Rick Riordan. After Greek mythology (Percy Jackson), Greek/Roman (Heroes of Olympus), and Egyptian (Kane Chronicles), Rick decides to try his hand with Norse Mythology, and the end result is good.</p>
-            </div>
-        </section>
+                        <label for="rating">Rating:</label>
+                        <select id="rating" name="rating"></select>
+                    </form>
+                </div>
+            </section>
+    </main>
 </body>
 </html>
