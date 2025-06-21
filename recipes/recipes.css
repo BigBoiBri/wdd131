@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    font-family: Delius Swash Caps, cursive;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo img{
+    width: 10%;
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    margin-left: 0.5em;
+}
+
+header {
+    border-bottom: 2px solid grey
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0em;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: -1em 0em;
+}
+
+
+.icon-star-empty {
+    font-size: 1.5em;
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-container button {
+    border-left: 1px solid black;
+    cursor: pointer;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    border: 2px solid black;
+    margin: 2em 0em;
+}
+
+
+.recipe img {
+    width: 100%;
+    justify-content: start;
+}
+
+.recipe-info {
+    margin: 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+}
+
+.tag h4 {
+    display: inline-block;
+    border: 1px solid black;
+    padding-top: .25em;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .25em;
+    margin: 0.5em;
+    align-items: self-start;
+}
+
+
+.recipe-info h2 {
+    font-family: Delius Swash Caps, cursive;
+    color: teal;
+}
+
+.social {
+    text-align: end;
+}
+
+footer img {
+    width: 5%;
+}
+
+footer a{
+    color: teal;
+    width: 0.6em;
+    text-decoration: none;
+}
+
+.search-container img {
+    height: 1.2em;
+}
+
+.search-container input {
+    height: 1.5em;
+}
+
+@media (max-width: 700px) {
+    .recipe{
+        flex-direction: column;
+        display: flex;
+    }
+
+    .recipe-info {
+        margin: 1em 0;
+        width: 100%;
+    }
+
+    .description {
+        display: none;
+    }
+    .social {
+        text-align: center;
+    }
+    footer img{
+        width: 10%;
+    }
+    footer {
+        text-align: center;
+    }
+}
