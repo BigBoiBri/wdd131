@@ -59,7 +59,7 @@ header {
     cursor: pointer;
 }
 
-.recipe {
+.recipes {
     display: flex;
     flex-direction: row;
     padding: 1em;
@@ -68,8 +68,8 @@ header {
 }
 
 
-.recipe img {
-    width: 100%;
+.recipes img {
+    max-width: 50%;
     justify-content: start;
 }
 
@@ -82,8 +82,7 @@ header {
     width: 100%;
 }
 
-.tag h4 {
-    display: inline-block;
+.recipe__tags li {
     border: 1px solid black;
     padding-top: .25em;
     padding-left: .5em;
@@ -91,6 +90,8 @@ header {
     padding-bottom: .25em;
     margin: 0.5em;
     align-items: self-start;
+    justify-items: start;
+    display:inline-block;
 }
 
 

@@ -279,3 +279,111 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+function random(num) {
+  return Math.floor(Math.random() * num);
+}
+
+function getRandomListEntry(list) {
+  const randomNum = random(list.length);
+  return list[randomNum];
+}
+
+function tagsTemplate(tags) {
+  let html = "";
+  tags.forEach(tag => {
+    html += `<li>${tag}</li>`;
+  });
+  return html;
+}
+
+function ratingTemplate(rating) {
+  let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
+  for (let i = 0; i < Math.floor(rating); i++) {
+    html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+  }
+  if (rating % 1 >= 0.5) {
+    html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+  }
+  for (let i = Math.ceil(rating); i < 5; i++) {
+    html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+  }
+  html += `</span>`;
+  return html;
+}
+
+function recipeTemplate(recipe) {
+  return `
+    <img src="${recipe.image}" alt="${recipe.name}">
+    <div class="recipe-info">
+      <ul class="recipe__tags">
+        ${tagsTemplate(recipe.tags)}
+      </ul>
+      <h2>${recipe.name}</h2>
+      ${ratingTemplate(recipe.rating)}
+      <div class="description">
+        <p>${recipe.description}</p>
+      </div>
+    </div>
+  `;
+}
+
+function renderRecipes(recipeList) {
+  const outputElement = document.querySelector(".recipes");
+  const recipeHtmlArray = recipeList.map(recipe => recipeTemplate(recipe));
+  outputElement.innerHTML = recipeHtmlArray.join("");
+}
+
+function init() {
+  const recipe = getRandomListEntry(recipes);
+  renderRecipes([recipe]);
+}
+
+// Filter function
+function filterRecipes(query) {
+  const filteredRecipes = recipes.filter(recipe => {
+    const nameMatch = recipe.name.toLowerCase().includes(query);
+    const descMatch = recipe.description.toLowerCase().includes(query);
+
+    const tagsMatch = recipe.tags.find(tag =>
+      tag.toLowerCase().includes(query)
+    );
+
+    const ingredientsMatch = recipe.recipeIngredient.find(ingredient =>
+      ingredient.toLowerCase().includes(query)
+    );
+
+    return nameMatch || descMatch || tagsMatch || ingredientsMatch;
+  });
+
+  // Sort by name alphabetically
+  filteredRecipes.sort((a, b) => a.name.localeCompare(b.name));
+
+  return filteredRecipes;
+}
+
+// Search handler function
+function searchHandler(e) {
+  e.preventDefault();
+
+  const queryInput = document.getElementById("search");
+  const query = queryInput.value.toLowerCase();
+
+  const results = filterRecipes(query);
+
+  if (results.length > 0) {
+    // Only render the first matching recipe
+    renderRecipes([results[0]]);
+  } else {
+    renderRecipes([]); // or show "No recipes found"
+  }
+}
+
+
+// Event listeners
+document.addEventListener("DOMContentLoaded", () => {
+  init();
+
+  const searchButton = document.querySelector("button[type='submit']");
+  searchButton.addEventListener("click", searchHandler);
+});
