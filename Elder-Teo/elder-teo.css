@@ -33,6 +33,20 @@ body{
     color: var(--accent2-color);
 }
 
+header {
+  position: relative;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+header .logo {
+    position: absolute;
+    left: 10px;
+    top: 10%;
+    width: 100px;
+}
+
 .skiptocontent a{
     position: absolute;
     top: -40px;
@@ -43,22 +57,18 @@ body{
 }
 
 header h1{
-    display: grid;
+    flex: 1;
     text-align: center;
-    padding: 20px;
 }
 
 header nav{
-    border-top: #322214 1px solid;
-    border-bottom: #322214 1px solid;
-    border-right: #322214 1px solid;
-    border-left: #322214 1px solid;
     margin-bottom: 20px;
 }
 
 li a{
     text-decoration: none;
     color: var(--secondary-color);
+    justify-content: end;
 }
 
 .main-nav{
@@ -73,7 +83,6 @@ li a{
 .main-nav li a{
     color: var(--accent2-color);
     padding: 10px;
-    border : 2px solid var(--accent1-color);
     border-radius: 5px;
     background: var(--accent1-color);
 }
@@ -101,12 +110,6 @@ li a{
     grid-column: 1/2;
 }
 
-img {
-    max-width: 250px;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-}
 
 images img{
     max-width: 100px;
@@ -173,6 +176,13 @@ images img{
         text-wrap: wrap;
         max-width: 250px;
     }
+    header .logo {
+    position: absolute;
+    left: 10px;
+    top: 10%;
+    width: 80px;
+}
+   
 
     .filters {
         grid-column: 3 / 4;
@@ -203,6 +213,12 @@ images img{
         width: 100%;
         margin-bottom: 10px;
     }
+   header .logo {
+    position: absolute;
+    left: 10px;
+    top: 10%;
+    width: 60px;
+}
 
     .filters {
         grid-column: 2;
