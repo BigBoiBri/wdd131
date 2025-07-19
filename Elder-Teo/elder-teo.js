@@ -53,7 +53,7 @@ fetch('articles.json')
         bookDiv.innerHTML = `
           <h2>${item.title}</h2>
           <p>${item.description}...</p>
-          <a href="Email.html?id=${item.id}">Read More</a>
+          <a href="email.html?id=${item.id}">Read More</a>
           ${item.imgSrc ? `<img src="${item.imgSrc}" alt="${item.imgAlt}">` : ''}
         `;
 
