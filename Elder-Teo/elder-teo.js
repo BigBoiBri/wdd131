@@ -39,7 +39,7 @@ fetch('articles.json')
     bookGrid.appendChild(message);
     return;
    }
-
+//asdasd
       filteredArticles.forEach(item => {
         const bookEntry = document.createElement('div');
         bookEntry.classList.add('bookentry');
