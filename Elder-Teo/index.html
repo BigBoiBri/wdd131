@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elder Teo</title>
-    <link rel="stylesheet" href="elder-teo.css">
-    <script defer src="elder-teo.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elder Teo</title>
+  <link rel="stylesheet" href="elder-teo.css" />
+  <script defer src="elder-teo.js"></script>
 </head>
 <body>
-    
+  <header>
+    <div class="skiptocontent">
+      <a href="#maincontent">skip to main content</a>
+    </div>
+    <h1>Teo's Emails</h1>
+    <section class="filterspacing">
+    <div class="filters">
+      <form class="filterform">
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search" placeholder="'Baptism', 'Companions', etc." />
+      </form>
+    </div>
+
+    <div class="filters">
+      <form class="filterform">
+        <label for="year-filter">Year:</label>
+        <select id="year-filter" name="year-filter">
+          <option value="">All</option>
+          <!-- dynamically populated years -->
+        </select>
+      </form>
+    </div>
+  </section>
+    <nav>
+    </nav>
+  </header>
+  
+  <main id="maincontent">
+    <section class="bookgrid" id="book-grid"></section>
+  </main>
 </body>
 </html>
