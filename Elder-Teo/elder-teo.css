@@ -37,9 +37,14 @@ header {
   position: relative;
   text-align: center;
   padding: 10px 0;
-  border-bottom: 1px solid var(--accent1-color);
+
 }
 
+header p{
+    margin-top: 45px;
+    text-align: center;
+    border-bottom: 1px solid black
+}
 
 header .logo {
     position: absolute;
@@ -47,6 +52,7 @@ header .logo {
     top: 10%;
     width: 150px;
 }
+
 
 .skiptocontent a{
     position: absolute;
@@ -62,9 +68,7 @@ header h1{
     text-align: center;
 }
 
-header nav{
-    margin-bottom: 20px;
-}
+
 
 li a{
     text-decoration: none;
@@ -127,7 +131,6 @@ images img{
 
 #year-filter {
     width: 100%;
-    padding: 5px;
     font-size: 1em;
 }
 
@@ -154,24 +157,39 @@ images img{
 }
 
 #search {
-    grid-column: 3/4;
     border: 1px solid var(--accent1-color);
     border-radius: 5px;
+    margin-top: 20px;
     background-color: var(--accent2-color);
     color: var(--accent1-color);
+    width: 100%;
+    margin-right: 10px
 }
 
 .filters{
+    margin-top: 20px;
     grid-column: 3/4;
-    background : var(--primary-color);
+    background : var(--accent1-color);
+    border: 1px solid var(--accent1-color);
+    border-radius: 10px;
 }
 
 .filterform{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    
     gap: 1px;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.filterform label{
+    margin-top: 20px;
+}
+
+#year-filter {
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 90%;
 }
 
 @media (max-width: 700px) {
@@ -190,7 +208,13 @@ images img{
    
 
     .filters {
-        grid-column: 3 / 4;
+        grid-column: 1/-1;
+    }
+
+    #search {
+        grid-column: 1 / 2;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .misc {
@@ -218,16 +242,18 @@ images img{
         width: 100%;
         margin-bottom: 10px;
     }
+
+    .filters {
+        grid-column: 1/-1;
+        text-align: center;
+    }
+
    header .logo {
     position: absolute;
     left: 10px;
     top: 10%;
     width: 100px;
 }
-
-    .filters {
-        grid-column: 2;
-    }
 
     .misc {
         grid-column: 2;
