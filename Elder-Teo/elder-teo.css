@@ -37,6 +37,7 @@ header {
   position: relative;
   text-align: center;
   padding: 10px 0;
+  border-bottom: 1px solid var(--accent1-color);
 }
 
 
@@ -119,11 +120,15 @@ images img{
     
 }
 
+#email-container img{
+    width: 25%;
+    text-align: center;
+}
+
 #year-filter {
     width: 100%;
     padding: 5px;
     font-size: 1em;
-    margin-bottom: 10px;
 }
 
 .book img{
